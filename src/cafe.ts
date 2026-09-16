@@ -167,6 +167,7 @@ console.log(allergyCard(brownie));
 // TS: The compiler will reject the next line once kitchenTicket returns a
 //     Readonly<> type. Leave it commented out with a note explaining why.
 // kitchenTicket(brownie).name = "Something else";
+/* Cannot change name because KitchenTicket is a ReadOnly Type. */
 
 // TS: Three more lines below are bugs that only the compiler can see. Once
 //     your types are in place, fix each one and note it in your commit message.
