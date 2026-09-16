@@ -2,7 +2,7 @@
 // 1. THE MENU
 // ---------------------------------------------------------------
 
-import { MenuItem, ComboDeal, OrderLine } from "./menuTypes";
+import { MenuItem, ComboDeal, OrderLine, KitchenTicket } from "./menuTypes";
 
 // TS: These three objects share a structure - declare an interface (call it
 //     MenuItem) that describes it, and annotate each declaration with it.
@@ -130,7 +130,7 @@ function updateItem(
 // TS: The kitchen ticket needs the name and course of an item, and nothing
 //     else - and it must not be modifiable once created. Declare its type by
 //     composing two utility types: Readonly<Pick<...>>.
-function kitchenTicket(item: MenuItem) {
+function kitchenTicket(item: MenuItem): KitchenTicket {
   return {
     name: item.name,
     course: item.course,
