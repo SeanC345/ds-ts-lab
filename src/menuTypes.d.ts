@@ -8,5 +8,7 @@ export interface MenuItem {
     nutrition: {
         calories:number;
         allergens: string[];
-    }
+    };
+    discountPercent?: number;
+    availableFrom?: Date;
 }

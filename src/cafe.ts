@@ -16,6 +16,8 @@ const soup : MenuItem = {
     calories: 180,
     allergens: ["celery"],
   },
+  discountPercent: 10,
+  availableFrom: new Date("2026-09-20"),
 };
 
 const risotto : MenuItem = {
@@ -42,6 +44,8 @@ const brownie : MenuItem = {
     calories: 450,
     allergens: ["milk", "eggs", "gluten"],
   },
+  discountPercent: 5,
+  availableFrom: new Date("2026-09-19"),
 };
 
 // TS: Not every item is on offer, and only some are seasonal. Add two
