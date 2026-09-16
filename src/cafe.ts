@@ -2,7 +2,7 @@
 // 1. THE MENU
 // ---------------------------------------------------------------
 
-import { MenuItem } from "./menuTypes";
+import { MenuItem, ComboDeal } from "./menuTypes";
 
 // TS: These three objects share a structure - declare an interface (call it
 //     MenuItem) that describes it, and annotate each declaration with it.
@@ -56,7 +56,7 @@ const menu = [soup, risotto, brownie];
 
 // TS: A combo is a named bundle of menu items sold at a fixed price. Declare a
 //     second interface for it (ComboDeal: id, name, items, price).
-const lunchCombo = {
+const lunchCombo : ComboDeal = {
   id: 101,
   name: "Soup & Sweet",
   items: [soup, brownie],
