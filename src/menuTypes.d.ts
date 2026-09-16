@@ -1,7 +1,9 @@
-interface menuItem {
+export type Course = "starter" | "main" | "dessert";
+
+export interface MenuItem {
     id: number;
     name: string;
-    course: string;
+    course: Course;
     price: number;
     nutrition: {
         calories:number;

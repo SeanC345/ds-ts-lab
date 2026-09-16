@@ -2,10 +2,12 @@
 // 1. THE MENU
 // ---------------------------------------------------------------
 
+import { MenuItem } from "./menuTypes";
+
 // TS: These three objects share a structure - declare an interface (call it
 //     MenuItem) that describes it, and annotate each declaration with it.
 //     Note that 'nutrition' is a nested object, so it needs a nested type.
-const soup : menuItem = {
+const soup : MenuItem = {
   id: 1,
   name: "Roast Tomato Soup",
   course: "starter",
@@ -16,7 +18,7 @@ const soup : menuItem = {
   },
 };
 
-const risotto : menuItem = {
+const risotto : MenuItem = {
   id: 2,
   name: "Mushroom Risotto",
   // TS: 'course' should only ever be one of three values. Declare a *literal
@@ -31,10 +33,10 @@ const risotto : menuItem = {
   },
 };
 
-const brownie : menuItem = {
+const brownie : MenuItem = {
   id: 3,
   name: "Chocolate Brownie",
-  course: "desert",
+  course: "dessert",
   price: 6.0,
   nutrition: {
     calories: 450,
