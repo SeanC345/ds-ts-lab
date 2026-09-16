@@ -23,3 +23,5 @@ export interface ComboDeal {
 export type OrderLine = MenuItem | ComboDeal;
 
 export type KitchenTicket = Readonly<Pick<MenuItem, "name" | "course">>;
+
+export type AllergyCard = Omit<MenuItem, "nutrition"> & { warning:string };

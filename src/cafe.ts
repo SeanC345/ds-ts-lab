@@ -2,7 +2,7 @@
 // 1. THE MENU
 // ---------------------------------------------------------------
 
-import { MenuItem, ComboDeal, OrderLine, KitchenTicket } from "./menuTypes";
+import { MenuItem, ComboDeal, OrderLine, KitchenTicket, AllergyCard } from "./menuTypes";
 
 // TS: These three objects share a structure - declare an interface (call it
 //     MenuItem) that describes it, and annotate each declaration with it.
@@ -140,7 +140,7 @@ function kitchenTicket(item: MenuItem): KitchenTicket {
 // TS: An allergy card is a MenuItem without its nutrition property, but with a
 //     'warning' string added. Declare its type with Omit<> and an intersection
 //     (&) - see the EventPass example in the Utility Types section.
-function allergyCard(item: MenuItem) {
+function allergyCard(item: MenuItem): AllergyCard {
   return {
     id: item.id,
     name: item.name,
