@@ -19,3 +19,5 @@ export interface ComboDeal {
     items: MenuItem[];
     price: number;
 }
+
+export type OrderLine = MenuItem | ComboDeal;

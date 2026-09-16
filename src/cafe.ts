@@ -2,7 +2,7 @@
 // 1. THE MENU
 // ---------------------------------------------------------------
 
-import { MenuItem, ComboDeal } from "./menuTypes";
+import { MenuItem, ComboDeal, OrderLine } from "./menuTypes";
 
 // TS: These three objects share a structure - declare an interface (call it
 //     MenuItem) that describes it, and annotate each declaration with it.
@@ -65,7 +65,7 @@ const lunchCombo : ComboDeal = {
 
 // TS: An order line is *either* a MenuItem or a ComboDeal. Declare a *type
 //     alias* for that union (e.g. OrderLine) and use it for the array below.
-const currentOrder = [risotto, lunchCombo, soup];
+const currentOrder : OrderLine[] = [risotto, lunchCombo, soup];
 
 // ---------------------------------------------------------------
 // 2. FUNCTIONS
