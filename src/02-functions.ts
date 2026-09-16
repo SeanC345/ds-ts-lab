@@ -64,6 +64,17 @@ function findFriends(
     return result;
 }
 
+function addInterest(
+    friend: Friend,
+    interest: string
+): string[] {
+    if (!friend.interests) {
+        friend.interests = [];
+    }
+    friend.interests.push(interest);
+    return friend.interests;
+}
+
 addColleague(colleagues.current, "Sheild O Connell", "HR", "soc@here.com");
 // console.log(colleagues.current.filter((c) => c.name === "Sheild O Connell"));
 
@@ -71,6 +82,7 @@ addColleague(colleagues.current, "Sheild O Connell", "HR", "soc@here.com");
 // console.log(sortColleagues(colleagues.current, (a, b) => a.name.length - b.name.length));
 // console.log(findFriends(friends, (friend) => friend.name.startsWith('Pa')));
 // console.log(findFriends(friends, (friend) => friend.age < 35));
-console.log(sortColleagues(colleagues.current, (a, b) => (a.contact.extension - b.contact.extension),3));
-console.log(sortColleagues(colleagues.current, (a, b) => (a.name.length - b.name.length),1));
-console.log(sortColleagues(colleagues.current, (a, b) => (a.name.length - b.name.length)));
+// console.log(sortColleagues(colleagues.current, (a, b) => (a.contact.extension - b.contact.extension),3));
+// console.log(sortColleagues(colleagues.current, (a, b) => (a.name.length - b.name.length),1));
+// console.log(sortColleagues(colleagues.current, (a, b) => (a.name.length - b.name.length)));
+console.log(addInterest(friends[0], 'Politics'))
