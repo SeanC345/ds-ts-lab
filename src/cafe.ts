@@ -105,6 +105,10 @@ function filterMenu(items: MenuItem[], predicate: (item: MenuItem) => boolean) {
 //     'undefined' value with a number, so handle that case explicitly.
 function cheapest(items: MenuItem[], max?: number) {
   const sorted = items.sort((a, b) => a.price - b.price);
+
+  if (max === undefined) {
+    return sorted;
+  }
   return sorted.slice(0, max);
 }
 
